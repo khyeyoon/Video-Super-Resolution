@@ -1,0 +1,50 @@
+name: EDVR_Vimeo90K_10_29
+model_type: EDVRModel
+scale: 4
+num_gpu: 4  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  test:
+    name: user_data
+    type: VideoTestDataset
+    dataroot_gt: /workspace/HY/BasicSR/SR_testset/new/val_HD/GT
+    dataroot_lq: /workspace/HY/BasicSR/SR_testset/new/val_HD/LR
+    #meta_info_file: 'None' 
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: 5
+    padding: reflection_circle
+
+# network structures
+network_g:
+  type: EDVR
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 64
+  num_frame: 5
+  deformable_groups: 8
+  num_extract_block: 5
+  num_reconstruct_block: 10
+  center_frame_idx: ~
+  hr_in: false
+  with_predeblur: false
+  with_tsa: false # !!
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/EDVR_L_x4_SR_Vimeo90K_official-162b54e4.pth
+  strict_load_g: false #!!
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
