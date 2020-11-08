@@ -58,7 +58,8 @@ paper : https://arxiv.org/pdf/1905.02716.pdf
 
 # Result of training with custom dataset : cartoon, video
 
-[![result video](https://youtu.be/q_T_8wexDy8/0.jpg)](https://youtu.be/q_T_8wexDy8)
+[![Video Label](https://img.youtu.be/q_T_8wexDy8/0.jpg)](https://youtu.be/q_T_8wexDy8)
+
 
 
 
