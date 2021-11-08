@@ -42,8 +42,12 @@ paper : https://arxiv.org/pdf/1905.02716.pdf
 > PYTHONPATH="./:${PYTHONPATH}" \\\
 > CUDA_VISIBLE_DEVICES=0,1,2,3 \\\
 > python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/EDVR/train_video_HD.yml --launcher pytorch
+    
+# Self-collection dataset 
 
-# train/validation dataset format
+<img src="https://github.com/khyeyoon/Video-Super-Resolution/blob/master/self-collection_dataset.PNG">
+
+### train/validation dataset format
 
     dataroot
     ├── subfolder1
@@ -55,6 +59,7 @@ paper : https://arxiv.org/pdf/1905.02716.pdf
         ├── frame001
         ├── ...
     ├── ...
+    
 
 # Result of training with custom dataset : cartoon, video
 
