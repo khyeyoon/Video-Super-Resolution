@@ -63,7 +63,9 @@ About 30,000 frames were collected through videos in YouTube and used as a datas
     ├── ...
     
 
-# Result of training with custom dataset : cartoon, video
+# Result of training with Self-collection dataset : cartoon, video
+
+You can check the result video through the link below
 
 [![Video Label](./demo.PNG)](https://youtu.be/q_T_8wexDy8)
 
