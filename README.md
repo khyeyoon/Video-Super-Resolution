@@ -45,6 +45,8 @@ paper : https://arxiv.org/pdf/1905.02716.pdf
     
 # Self-collection dataset 
 
+About 30,000 frames were collected through videos in YouTube and used as a dataset
+
 <img src="https://github.com/khyeyoon/Video-Super-Resolution/blob/master/self-collection_dataset.PNG">
 
 ### train/validation dataset format
