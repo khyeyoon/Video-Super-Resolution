@@ -43,7 +43,7 @@ paper : https://arxiv.org/pdf/1905.02716.pdf
 > CUDA_VISIBLE_DEVICES=0,1,2,3 \\\
 > python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/EDVR/train_video_HD.yml --launcher pytorch
     
-# Self-collection dataset 
+# Self-collection dataset (cartoon, video)
 
 About 30,000 frames were collected through videos in YouTube and used as a dataset
 
@@ -63,7 +63,7 @@ About 30,000 frames were collected through videos in YouTube and used as a datas
     ├── ...
     
 
-# Result of training with Self-collection dataset : cartoon, video
+# Result of training with Self-collection dataset
 
 You can check the result video through the link below
 
